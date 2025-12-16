@@ -1,6 +1,28 @@
+body {
+    background-color: rgb(182, 220, 220);
+}
+
 header {
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 30;
     text-transform: none;
+}
+
+.profile-cont {
+    display: flex;
+    gap: 30px;
+}
+
+.contents{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+}
+
+.contents div {
+    background-color: rgb(185, 190, 195);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
 }
