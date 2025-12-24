@@ -1,8 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Stats from "./pages/Stats";
+import { useTasks } from "./store/taskContext";
+import { useEffect } from "react";
 
 function App() {
+  const { darkMode } = useTasks();
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark" : "light";
+  }, [darkMode]);
   return (
     <Routes>
       <Route path="/" element={<Home />} />
