@@ -3,7 +3,7 @@ import { useTasks } from "../store/taskContext";
 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useTasks();
-    console.log("Dark mode value:", darkMode);
+    //console.log("Dark mode value:", darkMode);
   return (
     <header style={styles.header}>
       <h1>Task Tracker</h1>
@@ -14,7 +14,17 @@ const Header = () => {
       </nav>
 
       <button onClick={toggleDarkMode} style={styles.button}>
-        {darkMode ? "Light Mode" : "Dark Mode"}
+       {darkMode ? (
+          <>
+            <i className="bi bi-sun-fill" style={{ marginRight: "0.5rem" }}></i>
+            Light Mode
+          </>
+        ) : (
+          <>
+            <i className="bi bi-moon-fill" style={{ marginRight: "0.5rem" }}></i>
+            Dark Mode
+          </>
+        )}
       </button>
     </header>
   );

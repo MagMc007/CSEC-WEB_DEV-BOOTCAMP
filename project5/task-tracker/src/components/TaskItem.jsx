@@ -4,7 +4,7 @@ const TaskItem = ({ task }) => {
   const { toggleTask, deleteTask } = useTasks();
 
   return (
-    <div style={{ ...styles.container, ...(task.completed ? styles.completed : {}) }}>
+    <div className={`task-item ${task.completed ? "completed" : ""}`}>
       <input
         type="checkbox"
         checked={task.completed}
