@@ -8,7 +8,8 @@ function App() {
   const { darkMode } = useTasks();
 
   useEffect(() => {
-    document.body.className = darkMode ? "dark" : "light";
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(darkMode ? "dark" : "light");
   }, [darkMode]);
   return (
     <Routes>

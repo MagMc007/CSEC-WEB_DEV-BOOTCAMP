@@ -66,7 +66,7 @@ export const TaskProvider = ({ children }) => {
 
   return (
     <TaskContext.Provider
-      value={{ tasks, addTask, toggleTask, deleteTask, toggleDarkMode, }}
+      value={{ tasks, addTask, toggleTask, deleteTask, darkMode, toggleDarkMode, }}
     >
       {children}
     </TaskContext.Provider>
